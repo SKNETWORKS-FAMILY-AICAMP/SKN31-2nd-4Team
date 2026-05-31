@@ -3,7 +3,7 @@ import pandas as pd
 REF_DATE = pd.Timestamp('2017-03-01')
 
 print("▶ train 유저 ID 로딩 중...")
-train = pd.read_csv('./data/train_v2.csv')
+train = pd.read_csv('./data/train.csv')
 target_msno = set(train['msno'])
 print(f"  대상 유저 수: {len(target_msno):,}명")
 
@@ -94,7 +94,7 @@ user_logs = user_logs.merge(active_agg,  on='msno', how='left')
 user_logs = user_logs.merge(recent_agg,  on='msno', how='left')
 user_logs = user_logs.merge(prev_agg,    on='msno', how='left')
 
-user_logs.to_csv('./data/user_logs_agg.csv', index=False)
-print(f"✅ 저장 완료: ./data/user_logs_agg.csv")
+user_logs.to_csv('./data/user_logs_preprocess.csv', index=False)
+print(f"✅ 저장 완료: ./data/user_logs_preprocess.csv")
 print(f"   shape: {user_logs.shape}")
 print(f"   columns: {user_logs.columns.tolist()}")

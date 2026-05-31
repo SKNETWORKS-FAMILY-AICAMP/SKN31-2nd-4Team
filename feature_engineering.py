@@ -12,19 +12,14 @@ import numpy as np
 
 print("▶ 데이터 로딩 시작...")
 
-train        = pd.read_csv('./data/train_v2.csv')
-members      = pd.read_csv('./data/members_v3.csv')
-transactions = pd.read_csv('./data/transactions_v2.csv')
-# user_logs    = pd.read_csv('./data/user_logs_agg.csv')  # 가공된 파일 로딩
+train        = pd.read_csv('./data/train.csv')
+members      = pd.read_csv('./data/members_preprocessed.csv')
+transactions = pd.read_csv('./data/transactions_preprocessed.csv')
 
 # user_logs는 용량이 크므로 chunk 단위로 로딩
 print("▶ user_logs 로딩 중 (시간이 걸릴 수 있어요)...")
-# chunk_list = []
-# for chunk in pd.read_csv('./data/user_logs_v2.csv', chunksize=500_000):
-#     chunk_list.append(chunk)
-# user_logs = pd.concat(chunk_list, ignore_index=True)
 
-user_logs = pd.read_csv('./data/user_logs_agg.csv')
+user_logs = pd.read_csv('./data/user_logs_preprocess.csv')
 
 print(f"  train        : {train.shape}")
 print(f"  members      : {members.shape}")
