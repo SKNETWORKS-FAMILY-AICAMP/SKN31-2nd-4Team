@@ -13,7 +13,8 @@ import numpy as np
 print("▶ 데이터 로딩 시작...")
 
 train        = pd.read_csv('./data/train.csv')
-members      = pd.read_csv('./data/members_preprocessed.csv')
+# members      = pd.read_csv('./data/members_preprocessed.csv')
+members      = pd.read_csv('./data/members_v3.csv')
 transactions = pd.read_csv('./data/transactions_preprocessed.csv')
 
 # user_logs는 용량이 크므로 chunk 단위로 로딩
@@ -70,8 +71,14 @@ def build_member_features(members):
 # ── 2-2. 결제 행동 피처 ──────────────────────────────────────
 def build_transaction_features(transactions):
     df = transactions.copy()
-    df['transaction_date']      = pd.to_datetime(df['transaction_date'],      format='%Y%m%d')
-    df['membership_expire_date'] = pd.to_datetime(df['membership_expire_date'], format='%Y%m%d')
+    print(transactions.columns)
+    print(transactions[['transaction_date','membership_expire_date']].head())
+
+    # df['transaction_date']      = pd.to_datetime(df['transaction_date'],      format='%Y%m%d')
+    # df['membership_expire_date'] = pd.to_datetime(df['membership_expire_date'], format='%Y%m%d')
+
+    df['transaction_date'] = pd.to_datetime(df['transaction_date'])
+    df['membership_expire_date'] = pd.to_datetime(df['membership_expire_date'])
 
     # 할인율
     df['discount_rate'] = 1 - (

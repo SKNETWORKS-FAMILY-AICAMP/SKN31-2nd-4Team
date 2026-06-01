@@ -15,7 +15,7 @@ st.set_page_config(page_title="데이터 탐색 (EDA)", page_icon="📊", layout
 @st.cache_data
 def load_data():
     features     = pd.read_csv('./data/train_features.csv')
-    transactions = pd.read_csv('./data/transactions_v2.csv')
+    transactions = pd.read_csv('./data/transactions_preprocessed.csv')
     train_msnos  = set(features['msno'])
     transactions = transactions[transactions['msno'].isin(train_msnos)]
     return features, transactions
