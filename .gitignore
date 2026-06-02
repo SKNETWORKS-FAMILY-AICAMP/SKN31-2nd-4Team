@@ -221,3 +221,6 @@ data/train_features.csv
 data/transactions_preprocessed.csv
 data/train.csv
 data/user_logs_preprocess.csv
+data/test.csv
+data/val.csv
+data/merged_final.csv
