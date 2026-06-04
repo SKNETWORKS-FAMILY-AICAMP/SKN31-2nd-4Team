@@ -174,7 +174,11 @@ SKN31-2nd-4Team
 
 ## 수행 결과
 ### 1) 메인 페이지 - 
-<img src="images\main_page.png">
+<img src="images\hom1.png">
+<img src="images\eda_tab2.png">
+<img src="images\eda_tab3.png">
+<img src="images\model_tab4.png">
+<img src="images\trand_tab5.png">
 
 ---
 
