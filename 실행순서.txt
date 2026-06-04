@@ -1,6 +1,0 @@
-1. uv run python .\user_log_preprocess.py
-2. uv run python .\feature_engineering.py
-3. uv run python .\models_train\run_all.py
-4. streamlit run .\app.py
-
-uv pip install pandas streamlit matplotlib joblib scikit-learn shap lightgbm xgboost
