@@ -1,0 +1,87 @@
+/* assets/style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+html, body, [data-testid="stAppViewContainer"], [data-testid="stHeader"] {
+    background-color: #FFFFFF !important;
+    font-family: 'Noto Sans KR', sans-serif !important;
+    color: #1E293B !important;
+}
+
+/* Sidebar */
+
+[data-testid="stSidebar"] {
+    background-color: #0F172A !important;
+    border-right: 1px solid #E2E8F0;
+}
+
+[data-testid="stSidebar"] .stMarkdown,
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] h3 {
+    color: #F1F5F9 !important;
+}
+
+/* Metric */
+
+div[data-testid="stMetricValue"] {
+    color: #00AFEC !important;
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+}
+
+div[data-testid="stMetricLabel"] {
+    color: #475569 !important;
+}
+
+/* Header */
+
+.growth-header {
+    background: linear-gradient(
+        135deg,
+        #00AFEC 0%,
+        #0F172A 100%
+    );
+
+    padding: 30px;
+    border-radius: 16px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.growth-header h2 {
+    color: white;
+}
+
+.growth-header p {
+    color: #CBD5E1;
+}
+
+/* Card */
+
+.ux-metric-card {
+    background-color: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    padding: 24px;
+    border-radius: 16px;
+}
+
+.ux-card-title {
+    color: #64748B;
+    font-size: 13px;
+}
+
+.ux-card-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0F172A;
+}
+
+.ux-card-value-blue {
+    font-size: 32px;
+    font-weight: 700;
+    color: #00AFEC;
+}
+
+.ux-card-sub {
+    color: #94A3B8;
+}
